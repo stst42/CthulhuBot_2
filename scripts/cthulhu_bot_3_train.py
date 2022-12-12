@@ -55,62 +55,12 @@ X = X / float(n_vocab)
 y = np_utils.to_categorical(dataY)
 
 # define the LSTM model
-import second_lstm
+import models/second_lstm
 
 # define the checkpoint
-filepath="weights-improvement-v3-{epoch:02d}-{loss:.4f}.hdf5"
+filepath="weights/weights-improvement-second_lstm-{epoch:02d}-{loss:.4f}.hdf5"
 checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only=True, mode='min')
 callbacks_list = [checkpoint]
 
 # fit the model
 model.fit(X, y, epochs=40, batch_size=130, callbacks=callbacks_list)
-
-# load the network weights
-filename = "weights-improvement-v3-40-1.4905.hdf5"
-model.load_weights(filename)
-model.compile(loss='categorical_crossentropy', optimizer='adam')
-
-
-# try it
-
-# helper function to sample an index from a probability array
-def sample(preds,temperature):
-    preds = np.asarray(preds).astype('float64')
-    preds = np.log(preds) / temperature
-    exp_preds = np.exp(preds)
-    preds = exp_preds / np.sum(exp_preds)
-    probas = np.random.multinomial(y.shape[1],preds[0],1)
-    return np.argmax(probas)
-
-# test with random start in training
-# pick a random seed
-start = np.random.randint(0, len(dataX)-1)
-pattern = dataX[start]
-
-# test with invented test
-text='the creature in the darkness'
-pattern = [char_to_int[char] for char in text]
-
-print(text)
-temperature = 1.8
-new_text = []
-# predict
-for i in range(200):
-    # reshape input
-    x = np.reshape(pattern, (1, len(pattern), 1))
-    x = x / float(n_vocab)
-    # make preds
-    prediction = model.predict(x, verbose=0)
-    # add randomness
-    index = sample(prediction, temperature)
-    # transform into characters
-    result = int_to_char[index]
-    seq_in = [int_to_char[value] for value in pattern]
-    # writeout result
-    sys.stdout.write(result)
-    pattern.append(index)
-    pattern = pattern[1:len(pattern)]
-    # save in a vector
-    new_text.append(result)
-''.join(new_text)
-
