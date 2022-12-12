@@ -27,23 +27,27 @@ However some infos:
 
 - Python 3<br>
 - PyCharm community edition <br>
-- Windows 11 machine<br>
+- Linux Mint Mmachine<br>
 - AMD Ryzen 5 400 series <br>
 - NVidia GEFORCE GTX 1650<br>
 - 32GB RAM<br>
 
 # Folder structure
-You'll find a couple of folders you'll need to know:
+You'll find the data you'll need to know:
  - the data are from [this repo](https://github.com/urschrei/lovecraft/blob/master/lovecraft.txt)
- - [scripts](https://github.com/stst42/GITGenerativeNetwork/tree/main/scripts) where you can find scripts.
 
 main  
   |->scripts<br>
-  ||-> chtulhubot.py<br>
-  ||-> chtulhubot.py<br>
-  |-> weights-improvement-bigger-35-1.4846.hdf5<br>
-  |-> weights-improvement-v2-40-1.4714.hdf5<br>
-  |-> weights-improvement-v2-01-2.2795.hdf5<br>
+  ||-> models<br>
+    ||-> first_lstm.py<br>
+    ||-> second_lstm.py<br>
+  ||-> chtulhu_bot_3_train.py<br>
+  ||-> chtulhu_bot_3_apply.py<br>
+
+
+The models folder has the specifications of the model tested.
+The *train file is the file of training, and the *apply file, the apply file.
+Note, you need a weights folder not committed a the same level of scripts, where write the weights of the trained model.
 
 # scripts
 Both my scripts are based on some web sources like those:
