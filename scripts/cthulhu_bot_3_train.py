@@ -55,7 +55,7 @@ X = X / float(n_vocab)
 y = np_utils.to_categorical(dataY)
 
 # define the LSTM model
-import models/second_lstm
+execfile("/home/user01/CthulhuBot_2/scripts/models/second_lstm.py")
 
 # define the checkpoint
 filepath="weights/weights-improvement-second_lstm-{epoch:02d}-{loss:.4f}.hdf5"
@@ -63,4 +63,4 @@ checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only
 callbacks_list = [checkpoint]
 
 # fit the model
-model.fit(X, y, epochs=40, batch_size=130, callbacks=callbacks_list)
+model.fit(X, y, epochs=50, batch_size=150, callbacks=callbacks_list)
