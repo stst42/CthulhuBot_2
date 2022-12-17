@@ -60,10 +60,16 @@ You can read well the code on the scripts: the main differences between the two,
 Those are already weights of the chtulhubots. The bigger is for the first, the V2 are the first and last epochs weights, with the rispective loss function value.
 
 # some results
-Here some result made by chtulhubot2.py.
 
 
+Here some result made by chtulhubot2.py. Temperature is a paremater for randomness, the more is high, the most the network generate less probable (and more weird) results. 
+The results are kind of gibberish but they seems to capture the sense of the Lovecraft works.
 
+temperature 1.5, input "the creature in the darkness"
+alls of the monstrous and the part which the great man was seemed to the few and incalculable margemy strange form of the continuous continued of the things of the strange more and the world of the bearded feet and seemed to the black and contained this decay of the black man of the start of the sight of the warious for a sea of the monnt of the steadier of the signs of the absortage of a strange 
+
+temperature 1.7, input "the creature in the darkness"
+former and the other singular and for his deserted stars of the continuous sense of the old college of the care of the singular land of the deserted and dome and toined the deserted and forms of the bottom of the door of the desert of the old narrow and door of the form of all the distance and seemed to condealed a hills and the pictures of the careless deserted soads of a door of male in the door
 
 
 
