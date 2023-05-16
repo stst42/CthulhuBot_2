@@ -16,8 +16,6 @@ I am a fan of H.P.Lovecraft and I think I've read almost every of his works: so,
 
 So Here we go.
 
-# Purpose of this wall of text
-In this write up I'm going to write a kind of diary about what I am doing.
 
 # Some infos about hardware and software
 Training a Neural Network could be an hard job for your machine.
@@ -55,9 +53,6 @@ Both my scripts are based on some web sources like those:
  - [how to make better generations](https://stackoverflow.com/questions/47125723/keras-lstm-for-text-generation-keeps-repeating-a-line-or-a-sequence)
 
 You can read well the code on the scripts: the main differences between the two, is that the second has some different setting in epoch and batch and some strata. I've encountered some problem in memory allocation changeing other params.
-
-# weights-improvement-*
-Those are already weights of the chtulhubots. The bigger is for the first, the V2 are the first and last epochs weights, with the rispective loss function value.
 
 # some results
 
