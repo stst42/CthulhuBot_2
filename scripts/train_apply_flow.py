@@ -25,11 +25,16 @@ logger = logging.getLogger("cthulhubot")
 try:  # pragma: no cover - compatibility branch
     execfile
 except NameError:  # pragma: no cover - python3 fallback
+
     def execfile(path, globals_=None, locals_=None):
         """Execute the given file in the provided global/local scope."""
         with open(path, "r", encoding="utf-8") as handle:
             code = compile(handle.read(), path, "exec")
-        exec(code, globals_ if globals_ is not None else globals(), locals_ if locals_ is not None else locals())
+        exec(
+            code,
+            globals_ if globals_ is not None else globals(),
+            locals_ if locals_ is not None else locals(),
+        )
 
 
 # ---------------------------------------------------------------------------
