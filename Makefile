@@ -4,9 +4,9 @@ PY ?= python3
 
 lint:
 	@echo "Running Ruff lint..."
-	@ruff check scripts
+	@ruff check .
 
 format:
-	@echo "Formatting with Ruff..."
-	@ruff format scripts
+	@echo "Formatting with Black..."
+	@black --line-length 100 .
 

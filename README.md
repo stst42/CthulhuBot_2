@@ -29,16 +29,19 @@ The dataset is fetched on-the-fly from [urschrei/lovecraft](https://github.com/u
 - Linux Mint machine (AMD Ryzen 5 4000, NVIDIA GTX 1650, 32 GB RAM)
 
 ### Dev tooling
-- Linter: Ruff (fast Python linter/formatter)
+- Linter: Ruff (fast Python linter)
+- Formatter: Black
+- Hooks: pre-commit (runs Ruff + Black on commit and push)
 - Config: `.ruff.toml`
 
 Setup:
 1. Create/activate your virtualenv
 2. Install dev deps: `pip install -r requirements-dev.txt`
+3. Install git hooks: `pre-commit install --hook-type pre-commit --hook-type pre-push`
 
 Common tasks:
-- Lint: `make lint` (or `ruff check scripts`)
-- Format: `make format` (or `ruff format scripts`)
+- Lint: `make lint` (or `ruff check .`)
+- Format: `make format` (or `black --line-length 100 .`)
 
 ## Training and sampling
 1. Ensure a writable `weights/` directory exists alongside `scripts/`.

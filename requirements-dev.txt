@@ -6,3 +6,5 @@ keras>=2.15
 
 # Tooling
 ruff>=0.4
+black>=24.8
+pre-commit>=3.7

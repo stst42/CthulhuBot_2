@@ -35,6 +35,7 @@ except NameError:  # pragma: no cover - python3 fallback
 # ---------------------------------------------------------------------------
 # Data loading and preprocessing pipeline
 # ---------------------------------------------------------------------------
+
 # Fetch the Lovecraft corpus straight from GitHub (small enough for each run).
 raw_corpus_url = "https://raw.githubusercontent.com/urschrei/lovecraft/master/lovecraft.txt"
 logger.info("Downloading Lovecraft corpus from %s", raw_corpus_url)
