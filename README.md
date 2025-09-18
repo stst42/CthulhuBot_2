@@ -47,6 +47,18 @@ The models folder has the specifications of the model tested.
 The *train file is the file of training, and the *apply file, the apply file.
 Note, you need a weights folder not committed a the same level of scripts, where write the weights of the trained model.
 
+# Linting
+- Linter: Ruff (fast Python linter/formatter)
+- Config: `.ruff.toml`
+
+Setup (dev):
+- Create/activate your virtualenv
+- Install dev deps: `pip install -r requirements-dev.txt`
+
+Usage:
+- Lint: `make lint` (or `ruff check scripts`)
+- Format: `make format` (or `ruff format scripts`)
+
 # scripts
 Both my scripts are based on some web sources like those:
  - [a raw intro to LSTM](https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/)
@@ -65,7 +77,6 @@ alls of the monstrous and the part which the great man was seemed to the few and
 
 temperature 1.7, input "the creature in the darkness"
 former and the other singular and for his deserted stars of the continuous sense of the old college of the care of the singular land of the deserted and dome and toined the deserted and forms of the bottom of the door of the desert of the old narrow and door of the form of all the distance and seemed to condealed a hills and the pictures of the careless deserted soads of a door of male in the door
-
 
 
 

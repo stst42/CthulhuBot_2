@@ -1,0 +1,25 @@
+# Ruff configuration for linting and formatting
+
+# Project paths to include/exclude
+extend-exclude = [
+  "venv",
+  "weights",
+  ".git",
+  ".idea",
+]
+
+# Reasonable defaults
+line-length = 100
+
+# Enable common rule sets:
+# E: pycodestyle errors
+# F: pyflakes
+# I: isort (import sorting)
+lint.select = ["E", "F", "I"]
+
+# You can add ignores here if needed, e.g. long lines:
+# lint.ignore = ["E501"]
+
+# Formatting configuration (used by `ruff format`)
+target-version = "py38"
+

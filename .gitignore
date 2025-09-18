@@ -50,6 +50,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+.ruff_cache/
 
 # Translations
 *.mo
@@ -129,5 +130,6 @@ dmypy.json
 .pyre/
 
 
-folders
+# folders
 weights/
+/weights/

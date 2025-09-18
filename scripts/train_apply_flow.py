@@ -75,8 +75,8 @@ model.compile(loss='categorical_crossentropy', optimizer='adam')
 
 # test with random start in training
 # pick a random seed
-start = np.random.randint(0, len(dataX)-1)
-pattern = dataX[start]
+# start = np.random.randint(0, len(dataX)-1)
+# pattern = dataX[start]
 
 # test with invented test
 text='the creature in the darkness'
@@ -91,7 +91,7 @@ def sample(preds,temperature):
     probas = np.random.multinomial(y.shape[1],preds[0],1)
     return np.argmax(probas)
 
-temperature = 1.5
+temperature = 1.7
 new_text = []
 # predict
 for i in range(400):
