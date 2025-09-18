@@ -25,7 +25,7 @@ The dataset is fetched on-the-fly from [urschrei/lovecraft](https://github.com/u
 ## Environment & tooling
 - Python 3
 - Keras + TensorFlow backend
-- PyCharm Community Edition (author's IDE of choice)
+-Visual Studio Code (author's IDE of choice)
 - Linux Mint machine (AMD Ryzen 5 4000, NVIDIA GTX 1650, 32 GB RAM)
 
 ### Dev tooling
@@ -50,7 +50,7 @@ Common tasks:
    - Model checkpoints are saved to `weights/weights-improvement-v4-*.hdf5` via `ModelCheckpoint`.
    - Basic logging and defensive error handling will exit cleanly if downloading, training, or prediction fails.
 
-The script now contains inline explanations for each stage (data prep, model definition, training, and generation) and a small `execfile` compatibility shim so it can run under Python 3 while keeping the original architecture snippets intact.
+The script contains inline explanations for each stage (data prep, model definition, training, and generation) and a small `execfile` compatibility shim so it can run under Python 3.
 
 ## Results snapshot
 With a temperature of `1.7` and the seed `"the creature in the darkness"`, the model produces surreal but thematically consistent prose. Raising the temperature emphasises weirdness; lowering it makes the output more conservative and repetitive.
